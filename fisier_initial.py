@@ -1,1 +1,1 @@
-print("Buna seara")
+print("Buna ziua")
