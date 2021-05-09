@@ -1,4 +1,4 @@
-# Tema 1 OK
+gi# Tema 1 OK
 nume = input("Numele: ")
 text_introdus = input("Va rugam sa introduceti textul: ")
 if text_introdus.isdigit():
