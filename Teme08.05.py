@@ -1,4 +1,4 @@
-gi# Tema 1 OK
+# Tema 1
 nume = input("Numele: ")
 text_introdus = input("Va rugam sa introduceti textul: ")
 if text_introdus.isdigit():
@@ -6,10 +6,10 @@ if text_introdus.isdigit():
 else:
     raspuns = f"Sirul de caractere a fost gasit de {nume}."
 print(raspuns)
-
-
-# Tema 2
-
+#
+#
+# # Tema 2
+#
 numar_introdus = int(input("Introduceti un nr: "))
 
 if numar_introdus % 2 == 1:
@@ -19,9 +19,9 @@ elif numar_introdus % 2 == 0:
 else:
     text = f'Introduceti doar cifre'
 print(text)
-
-# Tema 3
-
+#
+# # Tema 3
+#
 anul = int(input("Anul: "))
 
 if anul % 4 == 1:
@@ -29,9 +29,9 @@ if anul % 4 == 1:
 elif anul % 4 == 0:
     text = f"Acest an este bisect."
 print(text)
-
-# Tema 4
-
+#
+# # Tema 4
+#
 numar = eval(input("Introduceti un nr: "))
 if numar in range(1,10):
     print("Numarul este pozitiv si mai mic decat 10")
@@ -42,9 +42,10 @@ elif numar < 0:
 
 #Tema 5
 #
-# while meniu.lower() != "quit":
 meniu = ""
-    meniu = input("> ")
+while meniu != "quit":
+
+    meniu = input("> ").lower()
     if meniu == "help":
         print("""
 1 – Afisare lista de cumparaturi
@@ -62,4 +63,6 @@ meniu = ""
         print("Stergere lista cumparaturi")
     elif meniu == "5":
         print("Cautare in lista de cumparaturi")
+    elif meniu == 'quit':
+        break
     else:print("Alegerea nu exista.Reincercati")
