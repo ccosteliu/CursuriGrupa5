@@ -28,8 +28,7 @@ if len(valoare_cnp) == 13:
                 print("Sex masculin, rezident in Romania")
             elif sex == 8:
                 print("Sex feminin, rezident in Romania")
-            elif sex == 9:
-                print("Persoane straine")
+
             else:
                 print('Sex invalid')
         except ValueError:
@@ -65,6 +64,8 @@ if len(valoare_cnp) == 13:
         # print(rest)
         if rest == int(valoare_cnp[-1]):
             print("'C' valid")
+        elif rest == 10:
+            int(valoare_cnp[-1]) == 1
         else:print("'C' invalid")
 
 
