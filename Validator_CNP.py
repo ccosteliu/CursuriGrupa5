@@ -62,7 +62,7 @@ if len(valoare_cnp) == 13:
            total += c[i]
         # print(f'Total C {total}')
         rest = total % 11
-        print(rest)
+        # print(rest)
         if rest == int(valoare_cnp[-1]):
             print("'C' valid")
         else:print("'C' invalid")
