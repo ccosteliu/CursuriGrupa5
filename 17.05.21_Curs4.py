@@ -32,10 +32,13 @@ while nr_incercari <= 7:
 
     if 7 - int(nr_incercari)== 0:
         print(f'\nJocul a luat sfarsit.Cuvantul secret era {cuvant}.')
+        # play_again = input("Reincercati(Y/N):>").lower()
+        # if play_again == "y":
         break
     elif ''.join(lista_cuvant) == cuvant:
         print(f'Felicitari. Ai descoperit cuvantul {cuvant}.')
         break
     else:
         print(' '.join(lista_cuvant))
+
 
