@@ -11,26 +11,28 @@ if len(valoare_cnp) == 13:
         print('Persoana straina')
     else:
         try:
-            data_de_comparat = datetime.datetime(int(f'19{an}'), luna, zi)
+            data_de_comparat = datetime.datetime(int(f"19{an}"), luna, zi)
+            data_18 = datetime.datetime(int(f"18{an}"), luna, zi)
+            data_20 = datetime.datetime(int(f"20{an}"), luna, zi)
             if sex == 1 and datetime.datetime(1900, 1, 1) < data_de_comparat < datetime.datetime(1999, 12, 31):
-                print('Sex masculin nascut intre anii 1900 - 1999')
+                print(f'Sex masculin nascut intre anii 1900 - 1999, luna: {luna}, ziua: {zi}')
             elif sex == 2 and datetime.datetime(1900, 1, 1) < data_de_comparat < datetime.datetime(1999, 12, 31):
-                print('Sex feminim nascut intre anii 1900 - 1999')
-            elif sex == 3 and datetime.datetime(1800, 1, 1) < data_de_comparat < datetime.datetime(1899, 12, 31):
-                print('Sex masculin nascut intre anii 1800 - 1899')
-            elif sex == 4 and datetime.datetime(1800, 1, 1) < data_de_comparat < datetime.datetime(1899, 12, 31):
-                print('Sex feminim nascut intre anii 1800 - 1899')
-            elif sex == 5 and datetime.datetime(2000, 1, 1) < data_de_comparat < datetime.datetime(2099, 12, 31):
-                print("Sex masculin nascut intre anii 2000 - 2099.")
-            elif sex == 6 and datetime.datetime(2000, 1, 1) < data_de_comparat < datetime.datetime(2099, 12, 31):
-                print("Sex feminin nascut intre anii 2000 - 2099.")
+                print(f'Sex feminim nascut intre anii 1900 - 1999, luna: {luna}, ziua: {zi}')
+            elif sex == 3 and datetime.datetime(1800, 1, 1) < data_18 < datetime.datetime(1899, 12, 31):
+                print(f'Sex masculin nascut intre anii 1800 - 1899, luna: {luna}, ziua: {zi}')
+            elif sex == 4 and datetime.datetime(1800, 1, 1) < data_18 < datetime.datetime(1899, 12, 31):
+                print(f'Sex feminim nascut intre anii 1800 - 1899, luna: {luna}, ziua: {zi}')
+            elif sex == 5 and datetime.datetime(2000, 1, 1) < data_20 < datetime.datetime(2099, 12, 31):
+                print(f"Sex masculin nascut intre anii 2000 - 2099, luna: {luna}, ziua: {zi}'")
+            elif sex == 6 and datetime.datetime(2000, 1, 1) < data_20 < datetime.datetime(2099, 12, 31):
+                print(f'Sex feminin nascut intre anii 2000 - 2099, luna: {luna}, ziua: {zi}')
             elif sex == 7:
                 print("Sex masculin, rezident in Romania")
             elif sex == 8:
                 print("Sex feminin, rezident in Romania")
 
             else:
-                print('Sex invalid')
+                print('Sex nevalidat')
         except ValueError:
             print('Data nu este valida')
 
@@ -65,7 +67,7 @@ if len(valoare_cnp) == 13:
         if rest == int(valoare_cnp[-1]):
             print("'C' valid")
         elif rest == 10:
-            int(valoare_cnp[-1]) == 1
+            var = valoare_cnp[-1] == 1
         else:print("'C' invalid")
 
 
@@ -73,3 +75,4 @@ if len(valoare_cnp) == 13:
 else:
         print("CNP incomplet")
 
+6110115169101
