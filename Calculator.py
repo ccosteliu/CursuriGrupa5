@@ -5,23 +5,23 @@ def get_input() -> (float,float,str):
     return a, operatie, b
 
 
-def suma(a: float, b: float):
+def suma(a: float, b: float) -> float:
     return a+b
 
 
-def subt(a: float, b: float):
+def subt(a: float, b: float) -> float:
     return a-b
 
 
-def mult(a: float, b: float):
+def mult(a: float, b: float) -> float:
     return a*b
 
 
-def div(a: float, b: float):
+def div(a: float, b: float) -> float:
     try:
         return a/b
     except ZeroDivisionError:
-        return 0, "Division by 0 - error"
+        return 0
 
 
 def calculator():
